@@ -1,43 +1,24 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
-import { Inter, Sora } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const sora = Sora({
-  subsets: ['latin'],
-  variable: '--font-sora',
-  display: 'swap',
-})
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Reseñas NFC Nicaragua — Multiplica tus reseñas en Google Maps',
-  description:
-    'Soluciones NFC para negocios locales en Nicaragua. Tus clientes tocan una tarjeta y dejan una reseña de 5 estrellas en Google Maps en segundos.',
-  generator: 'v0.app',
-}
-
-export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0b1020',
-}
+  title: "Reseñas NFC Nicaragua",
+  description: "Multiplica tus reseñas en Google Maps con tecnología NFC",
+  icons: {
+    icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>",
+  },
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es" className={`${inter.variable} ${sora.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    <html lang="es">
+      <body className="bg-dark text-white font-sans">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-  )
+  );
 }
