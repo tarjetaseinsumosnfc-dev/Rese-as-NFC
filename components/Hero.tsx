@@ -1,7 +1,6 @@
 'use client';
 
-import { ArrowRight, Star } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, Star, Smartphone } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -64,5 +63,3 @@ export default function Hero() {
     </section>
   );
 }
-
-import { Smartphone } from 'lucide-react';

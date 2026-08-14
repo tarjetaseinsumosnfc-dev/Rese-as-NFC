@@ -8,12 +8,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["node"],
     "strict": true,
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": ["src", "app"],
+  "include": ["src", "app", "components"],
   "exclude": ["node_modules"]
 }
