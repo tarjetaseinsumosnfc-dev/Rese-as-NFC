@@ -5,39 +5,35 @@ import { Check } from 'lucide-react';
 const combos = [
   {
     name: 'Combo Starter',
+    category: 'Negocio Individual',
     price: '20',
-    description: 'Ideal para negocios individuales',
+    description: 'Para negocios individuales',
     features: [
-      'Hasta 100 reseñas/mes',
-      '1 Tarjeta NFC',
-      'Panel básico',
-      'Soporte por email',
+      '1 Tarjeta NFC Personalizada',
+      '1 Soporte de escritorio regalía',
     ],
   },
   {
-    name: 'Combo Restaurante',
+    name: 'Combo Restaurante & Gastrobar',
+    category: 'Para equipos de servicio',
     price: '45',
-    description: 'Para establecimientos de comida',
+    description: 'Para establecimientos de comida y bares',
     features: [
-      'Hasta 500 reseñas/mes',
-      '5 Tarjetas NFC',
-      'Panel avanzado',
-      'Soporte prioritario',
-      'Reportes analíticos',
+      '1 Tarjeta con soporte para caja',
+      '2 Tarjetas con Lanyards para meseros',
+      '1 Sticker NFC de regalía',
     ],
     popular: true,
   },
   {
-    name: 'Combo Gastrobar',
-    price: '60',
-    description: 'Para bares y restaurantes premium',
+    name: 'Combo Movilidad',
+    category: 'Vendedores y delivery',
+    price: '30',
+    description: 'Para vendedores y servicios de delivery',
     features: [
-      'Reseñas ilimitadas',
-      '10 Tarjetas NFC',
-      'Panel completo',
-      'Soporte 24/7',
-      'Reportes en tiempo real',
-      'Integraciones personalizadas',
+      '1 Tarjeta de billetera',
+      '1 Llavero NFC',
+      '1 Sticker NFC de regalía',
     ],
   },
 ];
@@ -75,6 +71,7 @@ export default function Combos() {
               
               <div className="p-8 space-y-6">
                 <div>
+                  <p className="text-sm text-primary font-semibold mb-2">{combo.category}</p>
                   <h3 className="text-2xl font-bold mb-2">{combo.name}</h3>
                   <p className="text-sm text-gray-400">{combo.description}</p>
                 </div>
